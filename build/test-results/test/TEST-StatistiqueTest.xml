@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StatistiqueTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-06-10T14:11:15" hostname="einfolearning" time="0.016">
+<testsuite name="StatistiqueTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-06-10T14:34:38" hostname="einfolearning" time="0.02">
   <properties/>
   <testcase name="testPrix_WithMoreThanFiveCars_ShouldApplyDiscountsCorrectly()" classname="StatistiqueTest" time="0.015"/>
-  <testcase name="testPrix_WithLessThanFiveCars_ShouldReturnCorrectPrice()" classname="StatistiqueTest" time="0.0"/>
+  <testcase name="testPrix_WithEmptyCarList_ShouldThrowException()" classname="StatistiqueTest" time="0.002"/>
+  <testcase name="testPrix_WithLessThanFiveCars_ShouldReturnCorrectPrice()" classname="StatistiqueTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

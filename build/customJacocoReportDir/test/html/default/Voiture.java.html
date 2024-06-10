@@ -5,39 +5,35 @@ public class Voiture {
     private String marque;
     private double prix;
 
-<span class="nc" id="L8">    public Voiture(){</span>
-
-<span class="nc" id="L10">    }</span>
-
     /**
      *
      * @param marque
      * @param prix
      */
-<span class="fc" id="L17">    public Voiture(String marque, double prix){</span>
-<span class="fc" id="L18">        this.marque = marque;</span>
-<span class="fc" id="L19">        this.prix = prix;</span>
-<span class="fc" id="L20">    }</span>
+<span class="fc" id="L13">    public Voiture(String marque, double prix){</span>
+<span class="fc" id="L14">        this.marque = marque;</span>
+<span class="fc" id="L15">        this.prix = prix;</span>
+<span class="fc" id="L16">    }</span>
 
     public double getPrix() {
-<span class="fc" id="L23">        return prix;</span>
+<span class="fc" id="L19">        return prix;</span>
     }
 
     public String getMarque() {
-<span class="fc" id="L27">        return marque;</span>
+<span class="fc" id="L23">        return marque;</span>
     }
 
     public void setPrix(double prix) {
-<span class="fc" id="L31">        this.prix = prix;</span>
-<span class="fc" id="L32">    }</span>
+<span class="fc" id="L27">        this.prix = prix;</span>
+<span class="fc" id="L28">    }</span>
 
     public void setMarque(String marque) {
-<span class="fc" id="L35">        this.marque = marque;</span>
-<span class="fc" id="L36">    }</span>
+<span class="fc" id="L31">        this.marque = marque;</span>
+<span class="fc" id="L32">    }</span>
 
     @Override
     public String toString() {
-<span class="fc" id="L40">        return &quot;Voiture{&quot; +</span>
+<span class="fc" id="L36">        return &quot;Voiture{&quot; +</span>
                 &quot;marque='&quot; + marque + '\'' +
                 &quot;, prix=&quot; + prix +
                 '}';
@@ -45,10 +41,10 @@ public class Voiture {
 
     @Override
     public boolean equals(Object o) {
-<span class="nc bnc" id="L48" title="All 2 branches missed.">        if (this == o) return true;</span>
-<span class="nc bnc" id="L49" title="All 4 branches missed.">        if (o == null || getClass() != o.getClass()) return false;</span>
-<span class="nc" id="L50">        Voiture voiture = (Voiture) o;</span>
-<span class="nc bnc" id="L51" title="All 4 branches missed.">        return Double.compare(getPrix(), voiture.getPrix()) == 0 &amp;&amp; Objects.equals(getMarque(), voiture.getMarque());</span>
+<span class="nc bnc" id="L44" title="All 2 branches missed.">        if (this == o) return true;</span>
+<span class="nc bnc" id="L45" title="All 4 branches missed.">        if (o == null || getClass() != o.getClass()) return false;</span>
+<span class="nc" id="L46">        Voiture voiture = (Voiture) o;</span>
+<span class="nc bnc" id="L47" title="All 4 branches missed.">        return Double.compare(getPrix(), voiture.getPrix()) == 0 &amp;&amp; Objects.equals(getMarque(), voiture.getMarque());</span>
     }
 
 }

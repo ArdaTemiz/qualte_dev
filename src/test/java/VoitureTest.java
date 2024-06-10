@@ -65,4 +65,5 @@ public class VoitureTest {
         // Verify
         assertEquals(expectedToString, toString);
     }
+
 }

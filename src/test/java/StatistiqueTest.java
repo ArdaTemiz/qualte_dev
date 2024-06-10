@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class StatistiqueTest {
 
@@ -39,6 +40,15 @@ public class StatistiqueTest {
 
         // Verify
         assertEquals(expectedPrice, actualPrice, "Le prix total avec remises doit être " + expectedPrice);
+    }
+
+    @Test
+    void testPrix_WithEmptyCarList_ShouldThrowException() {
+        // Arrange
+        StatistiqueVoiture statistique = new StatistiqueVoiture();
+
+        // Act & Verify
+        assertThrows(ArithmeticException.class, () -> statistique.prix());
     }
 
 }
