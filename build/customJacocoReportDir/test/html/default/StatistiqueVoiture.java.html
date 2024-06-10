@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>StatistiqueVoiture.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">untitled</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">StatistiqueVoiture.java</span></div><h1>StatistiqueVoiture.java</h1><pre class="source lang-java linenums">import java.util.ArrayList;
+
+public class StatistiqueVoiture implements Statistique{
+
+    private ArrayList&lt;Voiture&gt; voitures;
+
+<span class="fc" id="L7">    public StatistiqueVoiture(){</span>
+<span class="fc" id="L8">        voitures = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L9">    }</span>
+
+    @Override
+    public void ajouter(Voiture voiture) {
+<span class="fc" id="L13">        voitures.add(voiture);</span>
+<span class="fc" id="L14">    }</span>
+
+    @Override
+    public int prix() throws ArithmeticException {
+<span class="pc bpc" id="L18" title="1 of 2 branches missed.">        if (voitures.isEmpty()) {</span>
+<span class="nc" id="L19">            throw new ArithmeticException(&quot;Il n'y a pas de voiture.&quot;);</span>
+        }
+
+<span class="fc" id="L22">        int totalPrix = 0;</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">        for (int i = 0; i &lt; voitures.size(); i++) {</span>
+<span class="fc" id="L24">            Voiture voiture = voitures.get(i);</span>
+<span class="fc" id="L25">            int remise = (i / 5) * 5; // 5% de remise supplémentaire pour chaque groupe de 5 voitures</span>
+<span class="fc" id="L26">            remise = Math.min(remise, 20000); // La remise maximale est de 20 000 euros</span>
+<span class="fc" id="L27">            int prixAvecRemise = (int) (voiture.getPrix() - (voiture.getPrix() * remise / 100));</span>
+<span class="fc" id="L28">            totalPrix += prixAvecRemise;</span>
+        }
+
+<span class="fc" id="L31">        return totalPrix;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

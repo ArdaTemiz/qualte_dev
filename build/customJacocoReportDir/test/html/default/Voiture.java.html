@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Voiture.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">untitled</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Voiture.java</span></div><h1>Voiture.java</h1><pre class="source lang-java linenums">import java.util.Objects;
+
+public class Voiture {
+
+    private String marque;
+    private double prix;
+
+<span class="nc" id="L8">    public Voiture(){</span>
+
+<span class="nc" id="L10">    }</span>
+
+    /**
+     *
+     * @param marque
+     * @param prix
+     */
+<span class="fc" id="L17">    public Voiture(String marque, double prix){</span>
+<span class="fc" id="L18">        this.marque = marque;</span>
+<span class="fc" id="L19">        this.prix = prix;</span>
+<span class="fc" id="L20">    }</span>
+
+    public double getPrix() {
+<span class="fc" id="L23">        return prix;</span>
+    }
+
+    public String getMarque() {
+<span class="fc" id="L27">        return marque;</span>
+    }
+
+    public void setPrix(double prix) {
+<span class="fc" id="L31">        this.prix = prix;</span>
+<span class="fc" id="L32">    }</span>
+
+    public void setMarque(String marque) {
+<span class="fc" id="L35">        this.marque = marque;</span>
+<span class="fc" id="L36">    }</span>
+
+    @Override
+    public String toString() {
+<span class="fc" id="L40">        return &quot;Voiture{&quot; +</span>
+                &quot;marque='&quot; + marque + '\'' +
+                &quot;, prix=&quot; + prix +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+<span class="nc bnc" id="L48" title="All 2 branches missed.">        if (this == o) return true;</span>
+<span class="nc bnc" id="L49" title="All 4 branches missed.">        if (o == null || getClass() != o.getClass()) return false;</span>
+<span class="nc" id="L50">        Voiture voiture = (Voiture) o;</span>
+<span class="nc bnc" id="L51" title="All 4 branches missed.">        return Double.compare(getPrix(), voiture.getPrix()) == 0 &amp;&amp; Objects.equals(getMarque(), voiture.getMarque());</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

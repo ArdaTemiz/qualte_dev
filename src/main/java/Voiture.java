@@ -5,10 +5,6 @@ public class Voiture {
     private String marque;
     private double prix;
 
-    public Voiture(){
-
-    }
-
     /**
      *
      * @param marque
