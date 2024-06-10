@@ -39,12 +39,4 @@ public class Voiture {
                 '}';
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Voiture voiture = (Voiture) o;
-        return Double.compare(getPrix(), voiture.getPrix()) == 0 && Objects.equals(getMarque(), voiture.getMarque());
-    }
-
 }

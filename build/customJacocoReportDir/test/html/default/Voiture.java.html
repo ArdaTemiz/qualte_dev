@@ -39,13 +39,5 @@ public class Voiture {
                 '}';
     }
 
-    @Override
-    public boolean equals(Object o) {
-<span class="nc bnc" id="L44" title="All 2 branches missed.">        if (this == o) return true;</span>
-<span class="nc bnc" id="L45" title="All 4 branches missed.">        if (o == null || getClass() != o.getClass()) return false;</span>
-<span class="nc" id="L46">        Voiture voiture = (Voiture) o;</span>
-<span class="nc bnc" id="L47" title="All 4 branches missed.">        return Double.compare(getPrix(), voiture.getPrix()) == 0 &amp;&amp; Objects.equals(getMarque(), voiture.getMarque());</span>
-    }
-
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
